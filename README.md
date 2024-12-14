@@ -61,17 +61,19 @@ from smart_311 import process_311_request
 
 # Example 311 request
 request = {
-    "service_request_id": "101005820652",
-    "status": "open",
+    "service_request_id": "101005820254",
+    "status": "closed",
+    "status_notes": "Resolved.",
     "service_name": "Requests for Street Cleaning",
     "service_code": "Public Works Department:Street Cleaning:Requests for Street Cleaning",
-    "description": "Lots of trash behind Washington St SL stop by Blackstone school",
-    "requested_datetime": "2024-12-14T18:00:00Z",
-    "updated_datetime": "2024-12-14T18:01:35Z",
-    "address": "Intersection Of Mystic St And Washington St, Roxbury, Ma",
-    "lat": 42.34047663,
-    "long": -71.07111052,
-    "media_url": "https://spot-boston-res.cloudinary.com/image/upload/v1734199257/boston/production/uc0xuhevrghsuq8gmdyu.jpg"
+    "description": "Garbage on sidewalk",
+    "requested_datetime": "2024-12-14T01:00:00Z",
+    "updated_datetime": "2024-12-14T01:25:16Z",
+    "address": "19 Worcester St, Roxbury, Ma, 02118",
+    "lat": 42.33801041,
+    "long": -71.07624045,
+    "media_url": "https://spot-boston-res.cloudinary.com/image/upload/v1734138056/boston/production/x1vhcizd7nvzb7xdzkfe.jpg#spot=e8762677-4564-41c3-b58b-3ddd206801cb",
+    "token": "93a90056-cccf-4d22-88bf-116c157d041e",
 }
 
 # Process the request
@@ -81,6 +83,12 @@ result = process_311_request(request)
 print(f"Enhanced Description: {result.updated_description}")
 print(f"Recommended Service: {result.recommended_service}")
 print(f"Confidence: {result.confidence}")
+```
+
+```python
+Recommended Service: Requests for Street Cleaning
+Enhanced Description: The area is littered with trash and debris. A blue box is present on the sidewalk, which needs to be removed or emptied. The surrounding area also requires attention to maintain cleanliness in the neighborhood.
+Confidence: 0.85
 ```
 
 ### Project Structure
