@@ -119,4 +119,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Technical Details
 
-For more detailed technical information about how the system works, see the accompanying [blog post](hershgupta.com).
+For more detailed technical information about how the system works, see the accompanying [blog post](https://hershgupta.com/posts/smarter-311-with-vision-models/).
