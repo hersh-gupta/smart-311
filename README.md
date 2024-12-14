@@ -20,7 +20,7 @@ Enhance municipal 311 service request processing using Large Multimodal Models (
 ## Installation
 
 ```bash
-git clone https://github.com/yourusername/smart-311.git
+git clone https://github.com/hersh-gupta/smart-311.git
 cd smart-311
 pip install dspy-ai pydantic
 
@@ -32,7 +32,7 @@ ollama pull llava:7b
 ## Usage
 
 ### Examples
-For code examples and different implementation approaches, check out our [examples directory](examples/). It includes both a simple standalone implementation and a more complete example using the full project structure.
+For code examples and different implementation approaches, check out [examples directory](examples/). It includes both a simple standalone implementation and a more complete example using the full project structure.
 
 ### Configuration
 Customize the system in [`src/config.py`](src/config.py):
