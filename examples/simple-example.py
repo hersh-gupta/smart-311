@@ -3,7 +3,7 @@ from typing import Literal
 import json
 
 # Configure the local LLaVA model
-lm = dspy.LM("ollama/llava:7b", api_base="http://127.0.0.1:11434/", api_key="")
+lm = dspy.LM("ollama/llama3.2-vision", api_base="http://127.0.0.1:11434/", api_key="")
 dspy.configure(lm=lm)
 
 ServiceNameLiteral = Literal[
@@ -52,4 +52,4 @@ result = predictor(image=image, original_description=description)
 print(f"Enhanced Description: {result.enhanced_description}")
 print(f"Recommended Service: {result.recommended_service_category}")
 print("\nFull Result:")
-print(json.dumps(result.model_dump(), indent=2, default=str))
+print(json.dumps(result.toDict(), indent=2, default=str))
